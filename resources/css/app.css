@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-slate-50 text-slate-900 antialiased;
+        font-family: 'Manrope', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    .font-display {
+        font-family: 'Fraunces', serif;
+    }
+}
+
+@layer components {
+    .container-shell {
+        @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    }
+
+    .section-shell {
+        @apply py-16 sm:py-20;
+    }
+
+    .card-panel {
+        @apply rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_20px_60px_-34px_rgba(15,23,42,0.45)];
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:shadow-lg;
+        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition duration-200 hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-50;
+    }
+
+    .badge-soft {
+        @apply inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-slate-600;
+    }
+
+    .field-label {
+        @apply text-sm font-semibold text-slate-700;
+    }
+
+    .field-input {
+        @apply mt-2 block w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-slate-400 focus:outline-none focus:ring-0;
+    }
+
+    .field-textarea {
+        @apply field-input min-h-32 resize-y;
+    }
+
+    .field-help {
+        @apply mt-2 text-xs text-slate-500;
+    }
+
+    .text-brand {
+        color: var(--color-primary);
+    }
+
+    .bg-brand-gradient {
+        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    }
+
+    .placeholder-surface {
+        background:
+            radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 42%),
+            linear-gradient(135deg, rgba(148, 163, 184, 0.16), rgba(226, 232, 240, 0.92));
+    }
+}
