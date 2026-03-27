@@ -17,8 +17,8 @@
     <section class="section-shell">
         <div class="container-shell grid gap-6 lg:grid-cols-[minmax(0,1fr)_420px]">
             <div class="space-y-6">
-                <div>
-                    <span class="badge-soft">Contacto y ubicacion</span>
+                <div class="text-center lg:text-left">
+                    <span class="badge-soft mx-auto lg:mx-0">Contacto y ubicacion</span>
                     <h1 class="mt-4 text-4xl font-semibold text-slate-900">Toda la informacion del comercio en una vista clara</h1>
                     <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
                         Esta pagina funciona como cierre comercial: deja visibles los datos clave, la sucursal principal y todas las ubicaciones activas del negocio.
@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="space-y-4">
-                    <div class="flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex flex-col items-center gap-4 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
                         <h2 class="text-2xl font-semibold text-slate-900">
                             {{ $locations->count() > 1 ? 'Sucursales activas' : 'Ubicacion del comercio' }}
                         </h2>
@@ -115,7 +115,7 @@
 
                 @if ($featuredProducts->isNotEmpty())
                     <div class="space-y-4">
-                        <div class="flex items-center justify-between gap-4">
+                        <div class="flex flex-col items-center gap-3 text-center lg:flex-row lg:justify-between lg:text-left">
                             <h2 class="text-2xl font-semibold text-slate-900">Tambien podes destacar productos aqui</h2>
                             <a href="{{ route('catalog.index') }}" class="text-sm font-semibold text-brand">Ver catalogo</a>
                         </div>

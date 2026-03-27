@@ -18,21 +18,21 @@
 
     <section class="section-shell">
         <div class="container-shell grid items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
-            <div class="space-y-8">
+            <div class="space-y-8 text-center lg:text-left">
                 <div class="space-y-4">
-                    <span class="badge-soft">Landing lista para personalizar</span>
-                    <h1 class="max-w-3xl text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl">
+                    <span class="badge-soft mx-auto lg:mx-0">Landing lista para personalizar</span>
+                    <h1 class="mx-auto max-w-3xl text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl lg:mx-0">
                         {{ $profile->business_name }}
                     </h1>
-                    <p class="max-w-2xl text-lg leading-8 text-slate-600">
+                    <p class="mx-auto max-w-2xl text-lg leading-8 text-slate-600 lg:mx-0">
                         {{ $profile->welcome_text }}
                     </p>
                 </div>
 
-                <div class="flex flex-wrap gap-3">
-                    <a href="{{ route('catalog.index') }}" class="btn-primary">Ver catalogo</a>
-                    <a href="#ubicacion" class="btn-secondary">Donde estamos</a>
-                    <a href="{{ $contactUrl }}" class="btn-secondary" target="{{ $contactTarget }}" rel="{{ $contactRel }}">
+                <div class="action-group-centered lg:justify-start">
+                    <a href="{{ route('catalog.index') }}" class="btn-primary w-full sm:w-auto">Ver catalogo</a>
+                    <a href="#ubicacion" class="btn-secondary w-full sm:w-auto">Donde estamos</a>
+                    <a href="{{ $contactUrl }}" class="btn-secondary w-full sm:w-auto" target="{{ $contactTarget }}" rel="{{ $contactRel }}">
                         Contactar / WhatsApp
                     </a>
                 </div>
@@ -129,12 +129,12 @@
 
     <section class="section-shell pt-0">
         <div class="container-shell space-y-8">
-            <div class="flex flex-wrap items-end justify-between gap-4">
+            <div class="flex flex-col items-center gap-4 text-center lg:flex-row lg:items-end lg:justify-between lg:text-left">
                 <div>
-                    <span class="badge-soft">Productos destacados</span>
+                    <span class="badge-soft mx-auto lg:mx-0">Productos destacados</span>
                     <h2 class="mt-4 text-3xl font-semibold text-slate-900">Una seleccion lista para mostrar al instante</h2>
                 </div>
-                <a href="{{ route('catalog.index') }}" class="btn-secondary">Ir al catalogo completo</a>
+                <a href="{{ route('catalog.index') }}" class="btn-secondary w-full sm:w-auto">Ir al catalogo completo</a>
             </div>
 
             <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -239,12 +239,12 @@
     @if ($locations->count() > 1)
         <section class="section-shell pt-0">
             <div class="container-shell">
-                <div class="flex flex-wrap items-end justify-between gap-4">
+                <div class="flex flex-col items-center gap-4 text-center lg:flex-row lg:items-end lg:justify-between lg:text-left">
                     <div>
-                        <span class="badge-soft">Red de sucursales</span>
+                        <span class="badge-soft mx-auto lg:mx-0">Red de sucursales</span>
                         <h2 class="mt-4 text-3xl font-semibold text-slate-900">La demo ya contempla negocios con mas de un punto de venta</h2>
                     </div>
-                    <a href="{{ route('contact') }}" class="btn-secondary">Ver datos completos</a>
+                    <a href="{{ route('contact') }}" class="btn-secondary w-full sm:w-auto">Ver datos completos</a>
                 </div>
 
                 <div @class([

@@ -14,8 +14,8 @@
 
         <header class="border-b border-slate-200/80 bg-white/85 backdrop-blur">
             <div class="container-shell">
-                <nav class="flex flex-wrap items-center justify-between gap-4 py-4">
-                    <a href="{{ route('home') }}" class="flex items-center gap-3">
+                <nav class="flex flex-col items-center gap-4 py-4 lg:flex-row lg:justify-between">
+                    <a href="{{ route('home') }}" class="flex items-center gap-3 text-center lg:text-left">
                         @if ($businessProfile->logo_url)
                             <img src="{{ $businessProfile->logo_url }}" alt="{{ $businessProfile->business_name }}" class="h-12 w-12 rounded-2xl border border-slate-200 bg-white p-1 object-contain">
                         @else
@@ -30,14 +30,14 @@
                         </div>
                     </a>
 
-                    <div class="flex flex-wrap items-center gap-2 text-sm font-medium text-slate-600">
+                    <div class="action-group-centered w-full text-sm font-medium text-slate-600 lg:w-auto lg:justify-end">
                         <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'text-brand' : 'hover:text-slate-900' }}">Inicio</a>
                         <a href="{{ route('catalog.index') }}" class="{{ request()->routeIs('catalog.index') ? 'text-brand' : 'hover:text-slate-900' }}">Catalogo</a>
                         <a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'text-brand' : 'hover:text-slate-900' }}">Contacto</a>
                         @auth
-                            <a href="{{ route('admin.dashboard') }}" class="btn-secondary">Panel admin</a>
+                            <a href="{{ route('admin.dashboard') }}" class="btn-secondary w-full sm:w-auto">Panel admin</a>
                         @else
-                            <a href="{{ route('login') }}" class="btn-secondary">Ingresar</a>
+                            <a href="{{ route('login') }}" class="btn-secondary w-full sm:w-auto">Ingresar</a>
                         @endauth
                     </div>
                 </nav>

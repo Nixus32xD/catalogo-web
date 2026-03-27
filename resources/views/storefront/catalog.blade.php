@@ -5,15 +5,15 @@
 @section('content')
     <section class="section-shell">
         <div class="container-shell space-y-8">
-            <div class="flex flex-wrap items-end justify-between gap-4">
+            <div class="flex flex-col items-center gap-4 text-center lg:flex-row lg:items-end lg:justify-between lg:text-left">
                 <div>
-                    <span class="badge-soft">Catalogo publico</span>
+                    <span class="badge-soft mx-auto lg:mx-0">Catalogo publico</span>
                     <h1 class="mt-4 text-4xl font-semibold text-slate-900">Productos para explorar, filtrar y consultar</h1>
                     <p class="mt-3 max-w-2xl text-sm leading-7 text-slate-600">
                         La estructura esta pensada para navegar rapido desde celular o escritorio, con filtros simples y destacados visibles.
                     </p>
                 </div>
-                <a href="{{ route('contact') }}" class="btn-secondary">Contacto rapido</a>
+                <a href="{{ route('contact') }}" class="btn-secondary w-full sm:w-auto">Contacto rapido</a>
             </div>
 
             <div class="card-panel p-5 sm:p-6">
@@ -33,7 +33,7 @@
                         </select>
                     </div>
 
-                    <div class="flex items-end gap-3">
+                    <div class="action-group items-stretch lg:items-end">
                         <button type="submit" class="btn-primary w-full sm:w-auto">Aplicar filtros</button>
                         <a href="{{ route('catalog.index') }}" class="btn-secondary w-full sm:w-auto">Limpiar</a>
                     </div>
@@ -42,7 +42,7 @@
 
             @if ($featuredProducts->isNotEmpty())
                 <div class="space-y-5">
-                    <div class="flex items-center justify-between gap-4">
+                    <div class="flex flex-col items-center gap-2 text-center lg:flex-row lg:justify-between lg:text-left">
                         <h2 class="text-2xl font-semibold text-slate-900">Destacados</h2>
                         <p class="text-sm text-slate-500">Ideal para resaltar productos clave o promociones.</p>
                     </div>
@@ -55,7 +55,7 @@
             @endif
 
             <div class="space-y-5">
-                <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex flex-col items-center gap-4 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
                     <div>
                         <h2 class="text-2xl font-semibold text-slate-900">Todos los productos</h2>
                         <p class="mt-1 text-sm text-slate-500">
